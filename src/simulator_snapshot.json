@@ -1,0 +1,21 @@
+{
+  "host_id": 112233445566,
+  "entries": [
+    {
+      "group_id": 12668946693571282165,
+      "group_instance_id": 18165771568562771184,
+      "group_name": "plugin_sdk.demo_app",
+      "processes": [
+        {
+          "process_name": "python3.5",
+          "properties": {
+            "CmdLine": "-m plugin_sdk.demo_app",
+            "WorkDir": "/home/demo",
+            "ListeningPorts": "8769"
+          }
+        }
+      ],
+      "properties": {"Technologies": "PYTHON"}
+    }
+  ]
+}

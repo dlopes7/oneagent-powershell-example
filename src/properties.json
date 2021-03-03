@@ -1,0 +1,3 @@
+{
+  "targets": "www.google.com:443\nlocalhost:8769\nlocalhost:8080\nwww.google.com:443\nwww.google.com:443\nwww.google.com:443"
+}

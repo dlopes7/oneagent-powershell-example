@@ -1,0 +1,63 @@
+{
+    "name": "custom.python.tcp_check_powershell",
+    "version": "1.001",
+    "type": "python",
+    "entity": "HOST",
+    "technologies": [],
+    "metricGroup": "tech.TCPChecksPowershell",
+    "source": {
+        "package": "tcp_check_extension_powershell",
+        "className": "TCPCheckPowershellExtension",
+        "install_requires": [],
+        "activation": "Singleton"
+    },
+    "properties": [
+        {"key":  "targets", "type": "Textarea"}
+    ],
+    "configUI": {
+        "displayName": "TCP Checks",
+        "properties": [
+            {"key":  "targets", "displayName": "Targets to test", "displayOrder": 1, "displayHint":  "List of host:port, separated by new lines"}
+        ]
+    },
+    "metrics": [
+        {
+            "statetimeseries":
+            {
+                "key":  "tcp_state",
+                "states":  ["OK", "ERROR"],
+                "dimensions": ["Target"],
+                "displayname":  "State"}
+        }
+    ],
+    "ui": {
+        "charts": [
+            {
+                "group": "TCP Checks",
+                "title": "TCP Checks Results",
+                "series": [
+                    {
+                        "key":  "tcp_state",
+                        "displayName":  "State",
+                        "statechart":  true,
+                        "statecolors":  ["#00ff00", "#B70000"]}
+                ]
+            }
+        ],
+        "keycharts": [
+            {
+                "group": "TCP Checks",
+                "title": "TCP Checks Results",
+                "series": [
+                    {
+                        "key":  "tcp_state",
+                        "displayName":  "State",
+                        "statechart":  true,
+                        "statecolors":  ["#00ff00", "#B70000"]
+                    }
+                ]
+            }
+        ]
+    }
+
+}
